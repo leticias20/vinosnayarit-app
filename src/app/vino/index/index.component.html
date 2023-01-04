@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Vinos Nayarit</h1>
+  
+    <a href="#" routerLink="/vino/create/" class="btn btn-success">Agregar Nuevo Vino</a>
+    
+    <table class="table table-bordered">
+      <tr>
+        <th>Tipo</th>
+        <th>Marca</th>
+        <th>Tamaño</th>
+        <th>País</th>
+        <th>Uva</th>
+        <th>Categoría</th>
+        <th width="220px">Año</th>
+      </tr>
+      <tr *ngFor="let vino of vinos">
+        <td>{{ vino.tipo }}</td>
+        <td>{{ vino.marca }}</td>
+        <td>{{ vino.tamano }}</td>
+        <td>{{ vino.pais }}</td>
+        <td>{{ vino.uva }}</td>
+        <td>{{ vino.categoria }}</td>
+        <td>{{ vino.anada }}</td>
+        <!-- <td>
+          <a href="#" [routerLink]="['/vino/', vino.id, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a>
+          <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
+        </td> -->
+      </tr>
+    </table>
+ </div>
